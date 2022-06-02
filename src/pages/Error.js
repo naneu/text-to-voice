@@ -2,7 +2,11 @@ import React from 'react'
 
 function Error() {
   return (
-    <div>Error</div>
+    <section className='error-section'>
+      <div className='error-page'>
+        <h1>Oops! page not found.</h1>
+      </div>
+    </section>
   )
 }
 
