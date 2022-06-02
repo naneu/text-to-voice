@@ -77,6 +77,11 @@ Navbar
   border-radius: 30px;
   margin-left: 0.5rem;
 }
+.nav-links button:hover {
+  background: #f78716;
+  color: #fff;
+  cursor: pointer;
+}
 .logo {
   width: 100px;
   height: 100px;
@@ -119,10 +124,10 @@ h3 {
   line-height: 24px;
   text-transform: capitalize;
 }
-.btn{
+.btn {
   margin-top: 91px;
 }
-.download-btn{
+.download-btn {
   border: 0;
   padding: 0.9rem 4rem;
   font-style: normal;
@@ -135,7 +140,7 @@ h3 {
   border-radius: 30px;
   margin-left: 3.5rem;
 }
-.convert{
+.convert {
   border: 0;
   padding: 0.9rem 4rem;
   font-style: normal;
@@ -143,10 +148,8 @@ h3 {
   font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
-  background: transparent;
-  background: #30B3FF;
+  background: #30b3ff;
   border-radius: 30px;
-  
 }
 
 @media screen and (min-width: 576px) {
@@ -156,18 +159,55 @@ h3 {
 }
 /* 
 ====== 
-Home Page
+Error Page
 ======
 */
-.error-section{
+.error-section {
   padding: 5rem 0;
   display: flex;
   justify-content: center;
 }
-.error-page{
+.error-page {
   text-align: center;
   text-transform: capitalize;
 }
-.error-page h1{
+.error-page h1 {
   letter-spacing: 0.3rem;
+}
+
+/* 
+====== 
+Preview Page
+======
+*/
+.preview{
+  margin: 3rem 0;
+}
+label {
+  font-style: normal;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 16px;
+  resize: none;
+  margin: 14px 0 30px;
+}
+.preview-btn{
+  border: 0;
+  padding: 0.9rem 4rem;
+  font-style: normal;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  background: rgba(48, 179, 255, 0.61);
+  border-radius: 30px;
 }

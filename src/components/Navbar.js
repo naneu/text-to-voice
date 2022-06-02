@@ -1,8 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../logo.svg"
+import logo from "../logo.svg";
 
 function Navbar() {
+
+  function handleClick() {
+    console.log("i got clicked");
+  }
   return (
     <nav className="navbar">
       <div className="nav-center">
@@ -13,9 +17,10 @@ function Navbar() {
           <li>Explore</li>
           <li>Pricing</li>
           <li>Enterprise</li>
-          <button>Preview</button>
+          <Link to="/preview">
+            <button onClick={handleClick}>Preview</button>
+          </Link>
         </ul>
-        
       </div>
     </nav>
   );
