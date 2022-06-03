@@ -5,7 +5,7 @@ import { FaBars } from "react-icons/fa";
 import { useGlobalContext } from "../context";
 
 function Navbar() {
-  const { openSidebar, isSidebarOpen } = useGlobalContext();
+  const { openSidebar } = useGlobalContext();
   function handleClick() {
     console.log("i got clicked");
   }

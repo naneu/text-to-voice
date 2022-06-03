@@ -3,8 +3,8 @@ import React, { useState, useContext } from "react";
 const AppContext = React.createContext();
 
 export function AppProvider({ children }) {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
 
   function openSidebar() {
     setIsSidebarOpen(true);
@@ -25,7 +25,7 @@ export function AppProvider({ children }) {
   );
 }
 
-export function useGlobalContext(){
-    return useContext(AppContext)
+export function useGlobalContext() {
+  return useContext(AppContext);
 }
 
