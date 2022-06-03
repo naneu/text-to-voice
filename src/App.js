@@ -5,6 +5,7 @@ import Error from "./pages/Error";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Preview from "./pages/Preview";
 import Sidebar from "./components/Sidebar";
+import Submenu from "./components/Submenu";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Router>
         <Navbar />
         <Sidebar />
+        <Submenu />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/preview" element={<Preview />} />

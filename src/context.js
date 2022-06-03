@@ -12,12 +12,21 @@ export function AppProvider({ children }) {
   function closeSidebar() {
     setIsSidebarOpen(false);
   }
+  function openSubmenu() {
+    setIsSubmenuOpen(true);
+  }
+  function closeSubmenu() {
+    setIsSubmenuOpen(false);
+  }
   return (
     <AppContext.Provider
       value={{
         openSidebar,
         isSidebarOpen,
+        isSubmenuOpen,
         closeSidebar,
+        openSubmenu,
+        closeSubmenu
       }}
     >
       {children}

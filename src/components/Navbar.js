@@ -5,7 +5,13 @@ import { FaBars } from "react-icons/fa";
 import { useGlobalContext } from "../context";
 
 function Navbar() {
-  const { openSidebar } = useGlobalContext();
+  const { openSidebar, openSubmenu, closeSubmenu } = useGlobalContext();
+  function displaySubmenu(e) {
+    openSubmenu();
+  }
+  // function closeSubmenu(e) {
+  //   closeSubmenu();
+  // }
   function handleClick() {
     console.log("i got clicked");
   }
@@ -21,9 +27,9 @@ function Navbar() {
           </button>
         </div>
         <ul className="nav-links">
-          <li>Explore</li>
-          <li>Pricing</li>
-          <li>Enterprise</li>
+          <li onMouseOver={displaySubmenu}>Explore</li>
+          <li onMouseOver={displaySubmenu}>Pricing</li>
+          <li onMouseOver={displaySubmenu}>Enterprise</li>
         </ul>
         <Link to="/preview">
           <button onClick={handleClick} className="nav-btn">
