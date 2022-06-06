@@ -381,3 +381,8 @@ textarea {
   background: rgba(48, 179, 255, 0.61);
   border-radius: 30px;
 }
+.preview-btn:hover{
+  background: #30b3ff;
+  color: #fff;
+  cursor: pointer;
+}
