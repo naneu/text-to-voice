@@ -18,7 +18,7 @@ function Home() {
             <p>Drag and drop your file here</p>
             <p>Choose a file</p>
           </div>
-          <div className="btn">
+          <div className="btn-home">
             <button className="convert">convert</button>
             <button className="download-btn">download</button>
           </div>

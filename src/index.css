@@ -25,7 +25,7 @@ h4 {
   margin-bottom: 0.75rem;
   font-size: 0.875rem;
 }
-a{
+a {
   text-decoration: none;
 }
 /* 
@@ -42,8 +42,8 @@ Navbar
   position: relative;
 }
 .nav-center {
- width: 90vw;
- max-width: 1170px;
+  width: 90vw;
+  max-width: 1170px;
 }
 .nav-header {
   display: flex;
@@ -69,7 +69,7 @@ Navbar
 .nav-btn {
   display: none;
 }
-.logo{
+.logo {
   width: 80px;
   height: 80px;
 }
@@ -83,7 +83,7 @@ Navbar
   .toggle-btn {
     display: none;
   }
-  .nav-btn{
+  .nav-btn {
     display: inline-block;
   }
   .nav-links {
@@ -108,7 +108,7 @@ Navbar
     padding: 0.25rem 3rem;
     transition: all 0.3s linear;
   }
-  .nav-btn{
+  .nav-btn {
     border: 0;
     padding: 0.9rem 4rem;
     font-style: normal;
@@ -141,7 +141,7 @@ sidebar
   place-items: center;
   visibility: hidden;
   z-index: -1;
-  transition:all 0.3s linear;
+  transition: all 0.3s linear;
   transform: scale(0);
   background: rgba(0, 0, 0, 0.5);
 }
@@ -153,7 +153,7 @@ sidebar
 .sidebar {
   width: 90vw;
   height: 95vh;
-  max-width:620px;
+  max-width: 620px;
   background: #fff;
   border-radius: 0.25rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -212,7 +212,7 @@ sidebar
   transition: all 0.3s linear;
 }
 .submenu::before {
-  content: '';
+  content: "";
   display: block;
   width: 0;
   height: 0;
@@ -294,9 +294,10 @@ h3 {
   line-height: 24px;
   text-transform: capitalize;
 }
-/* .btn {
+.btn-home {
   margin-top: 91px;
-} */
+  display: flex;
+}
 .download-btn {
   border: 0;
   padding: 0.9rem 4rem;
@@ -305,10 +306,16 @@ h3 {
   font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
-  background: transparent;
   background: #f79616;
   border-radius: 30px;
   margin-left: 3.5rem;
+}
+
+.download-btn:hover {
+  color: #fff;
+  background: #f8920b;
+  font-weight: 400;
+  cursor: pointer;
 }
 .convert {
   border: 0;
@@ -322,11 +329,49 @@ h3 {
   border-radius: 30px;
 }
 
-@media screen and (min-width: 576px) {
-  .home {
-    grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
+.convert:hover {
+  color: #fff;
+  background: #17a8fc;
+  font-weight: 400;
+  cursor: pointer;
+}
+@media only screen and (min-width: 500px) {
+  .dropbox {
+    width: 450px;
+    height: 270px;
+  }
+  .btn-home{
+    align-items: flex-end;
   }
 }
+@media only screen and (min-width: 600px) {
+  .dropbox {
+    width: 500px;
+    height: 270px;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .dropbox {
+    width: 550px;
+    height: 270px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .dropbox {
+    width: 700px;
+    height: 270px;
+  }
+} 
+@media only screen and (min-width: 992px) {
+  .dropbox {
+    width: 900px;
+    height: 270px;
+  }
+} 
+
 /* 
 ====== 
 Error Page
@@ -350,7 +395,7 @@ Error Page
 Preview Page
 ======
 */
-.preview{
+.preview {
   margin: 3rem 0;
 }
 label {
@@ -370,7 +415,7 @@ textarea {
   resize: none;
   margin: 14px 0 30px;
 }
-.preview-btn{
+.preview-btn {
   border: 0;
   padding: 0.9rem 4rem;
   font-style: normal;
@@ -381,7 +426,7 @@ textarea {
   background: rgba(48, 179, 255, 0.61);
   border-radius: 30px;
 }
-.preview-btn:hover{
+.preview-btn:hover {
   background: #30b3ff;
   color: #fff;
   cursor: pointer;
