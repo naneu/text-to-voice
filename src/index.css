@@ -335,13 +335,19 @@ h3 {
   font-weight: 400;
   cursor: pointer;
 }
+@media only screen and (max-width: 576px) {
+  .btn-home {
+    display: grid;
+    row-gap: 30px;
+  }
+  .download-btn {
+    margin-left: 0rem;
+  }
+}
 @media only screen and (min-width: 500px) {
   .dropbox {
     width: 450px;
     height: 270px;
-  }
-  .btn-home{
-    align-items: flex-end;
   }
 }
 @media only screen and (min-width: 600px) {
@@ -364,13 +370,13 @@ h3 {
     width: 700px;
     height: 270px;
   }
-} 
+}
 @media only screen and (min-width: 992px) {
   .dropbox {
     width: 900px;
     height: 270px;
   }
-} 
+}
 
 /* 
 ====== 
