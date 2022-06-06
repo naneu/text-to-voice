@@ -14,16 +14,17 @@ function Preview() {
           </div>
 
           <div className="preview">
-            <form>
+            <form className="">
               <label>write your text here</label>
               <textarea
                 type="text"
                 placeholder="write or copy paste some text ..."
               />
-              <button className="preview-btn">preview</button>
+              <div className="test">
+                <button className="preview-btn">preview</button>
+              </div>
             </form>
           </div>
-      
         </div>
       </section>
     </div>

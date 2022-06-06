@@ -34,7 +34,7 @@ Navbar
 ======
 */
 .navbar {
-  height: 6rem;
+  /* height: 6rem; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,6 +124,27 @@ Navbar
     background: #f78716;
     color: #fff;
     cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .nav-btn {
+    display: grid;
+    border: 0;
+    padding: 0.9rem 4rem;
+    font-style: normal;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    /* background: #f79616; */
+    background: #ffe8c5;
+    border-radius: 30px;
+    margin-top: 10px;
+  }
+  .nav-btn:hover {
+    background: #f78716;
+    color: #fff;
   }
 }
 /* 
@@ -403,6 +424,7 @@ Preview Page
 */
 .preview {
   margin: 3rem 0;
+  display: grid;
 }
 label {
   font-style: normal;
@@ -436,4 +458,9 @@ textarea {
   background: #30b3ff;
   color: #fff;
   cursor: pointer;
+}
+@media only screen and (max-width: 576px) {
+  .test {
+    display: grid;
+  }
 }
