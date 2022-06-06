@@ -1,18 +1,22 @@
 import React, { useState, useContext } from "react";
-
+import { links } from "./components/Sidebar";
 const AppContext = React.createContext();
 
 export function AppProvider({ children }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
-
+  const [location, setLocation] = useState({});
+  const [page, setPage] = useState({ link: "", sublinks: [] });
   function openSidebar() {
     setIsSidebarOpen(true);
   }
   function closeSidebar() {
     setIsSidebarOpen(false);
   }
-  function openSubmenu() {
+  function openSubmenu(text, coordinates) {
+   const page = links.find((p)=> p.link === text)
+    setPage(page);
+    setLocation(coordinates);
     setIsSubmenuOpen(true);
   }
   function closeSubmenu() {
@@ -26,7 +30,9 @@ export function AppProvider({ children }) {
         isSubmenuOpen,
         closeSidebar,
         openSubmenu,
-        closeSubmenu
+        closeSubmenu,
+        location,
+        page,
       }}
     >
       {children}
@@ -37,4 +43,3 @@ export function AppProvider({ children }) {
 export function useGlobalContext() {
   return useContext(AppContext);
 }
-

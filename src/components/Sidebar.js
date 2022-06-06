@@ -2,7 +2,7 @@ import React from "react";
 import { useGlobalContext } from "../context";
 import { FaBook, FaBriefcase, FaCreditCard, FaTimes } from "react-icons/fa";
 
-const links = [
+export const links = [
   {
     link: "Explore",
     sublinks: [
@@ -12,7 +12,7 @@ const links = [
     ],
   },
   {
-    link: "pricing",
+    link: "Pricing",
     sublinks: [
       { label: "billing", icon: <FaCreditCard /> },
       { label: "plugins", icon: <FaBriefcase/> },

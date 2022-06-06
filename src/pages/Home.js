@@ -1,9 +1,10 @@
 import React from "react";
 import { useGlobalContext } from "../context";
 function Home() {
+  const {closeSubmenu} = useGlobalContext()
   return (
     <div>
-      <section className="section">
+      <section className="section" onMouseOver={closeSubmenu}>
         <div className="home">
           <div className="text">
             <h3>Text to speech software</h3>

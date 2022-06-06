@@ -25,7 +25,9 @@ h4 {
   margin-bottom: 0.75rem;
   font-size: 0.875rem;
 }
-
+a{
+  text-decoration: none;
+}
 /* 
 ====== 
 Navbar
@@ -72,7 +74,7 @@ Navbar
   height: 80px;
 }
 /* nav media query */
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1100px) {
   .nav-center {
     display: grid;
     grid-template-columns: auto 1fr auto;

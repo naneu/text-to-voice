@@ -7,16 +7,19 @@ import { useGlobalContext } from "../context";
 function Navbar() {
   const { openSidebar, openSubmenu, closeSubmenu } = useGlobalContext();
   function displaySubmenu(e) {
-    openSubmenu();
+    const page = e.target.textContent;
+    const tempBtn = e.target.getBoundingClientRect();
+    const center = (tempBtn.left + tempBtn.right) / 2;
+    const bottom = tempBtn.bottom - 3;
+    openSubmenu(page, { center, bottom });
   }
-  // function closeSubmenu(e) {
-  //   closeSubmenu();
-  // }
-  function handleClick() {
-    console.log("i got clicked");
+  function handleSubmenu(e) {
+    if (!e.target.classList.contains("link-li")) {
+      closeSubmenu();
+    }
   }
   return (
-    <nav className="navbar">
+    <nav className="navbar" onMouseOver={handleSubmenu}>
       <div className="nav-center">
         <div className="nav-header">
           <Link to="/">
@@ -27,14 +30,18 @@ function Navbar() {
           </button>
         </div>
         <ul className="nav-links">
-          <li onMouseOver={displaySubmenu}>Explore</li>
-          <li onMouseOver={displaySubmenu}>Pricing</li>
-          <li onMouseOver={displaySubmenu}>Enterprise</li>
+          <li onMouseOver={displaySubmenu} className="link-li">
+            Explore
+          </li>
+          <li onMouseOver={displaySubmenu} className="link-li">
+            Pricing
+          </li>
+          <li onMouseOver={displaySubmenu} className="link-li">
+            Enterprise
+          </li>
         </ul>
         <Link to="/preview">
-          <button onClick={handleClick} className="nav-btn">
-            Preview
-          </button>
+          <button className="nav-btn">Preview</button>
         </Link>
       </div>
     </nav>
