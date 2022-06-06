@@ -74,7 +74,7 @@ Navbar
   height: 80px;
 }
 /* nav media query */
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 800px) {
   .nav-center {
     display: grid;
     grid-template-columns: auto 1fr auto;
@@ -199,7 +199,7 @@ sidebar
 /* submenu */
 /* links */
 .submenu {
-  background: #ca8888;
+  background: #ffeaea;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 4rem;
