@@ -1,7 +1,8 @@
 import React from "react";
+import Dropzone from "../components/Dropzone";
 import { useGlobalContext } from "../context";
 function Home() {
-  const {closeSubmenu} = useGlobalContext()
+  const { closeSubmenu } = useGlobalContext();
   return (
     <div>
       <section className="section" onMouseOver={closeSubmenu}>
@@ -13,11 +14,14 @@ function Home() {
               straightforward
             </p>
           </div>
+          <div>
+            <Dropzone />
+          </div>
 
-          <div className="dropbox">
+          {/* <div className="dropbox">
             <p>Drag and drop your file here</p>
             <p>Choose a file</p>
-          </div>
+          </div> */}
           <div className="btn-home">
             <button className="convert">convert</button>
             <button className="download-btn">download</button>

@@ -298,13 +298,19 @@ h3 {
   margin: 0 auto;
   max-width: 1170px;
 }
+.dropzone{
+  margin-top: 86px;
+}
+.aside-div{
+  margin-top: 10px;
+}
 .dropbox {
   /* position: absolute; */
   margin-top: 86px;
   width: 900px;
   height: 270px;
   background: rgba(22, 161, 242, 0.24);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
   padding: 100px 0;
   text-align: center;
 }
